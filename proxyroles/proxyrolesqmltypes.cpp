@@ -14,6 +14,8 @@ void registerProxyRoleTypes() {
     qmlRegisterType<ExpressionRole>("SortFilterProxyModel", 0, 2, "ExpressionRole");
 }
 
+#ifndef SORT_FILTER_MODEL_DISABLE_AUTO_QML_REGISTER
 Q_COREAPP_STARTUP_FUNCTION(registerProxyRoleTypes)
+#endif
 
 }

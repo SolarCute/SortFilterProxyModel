@@ -22,6 +22,8 @@ void registerFiltersTypes() {
     qmlRegisterType<AllOfFilter>("SortFilterProxyModel", 0, 2, "AllOf");
 }
 
+#ifndef SORT_FILTER_MODEL_DISABLE_AUTO_QML_REGISTER
 Q_COREAPP_STARTUP_FUNCTION(registerFiltersTypes)
+#endif
 
 }

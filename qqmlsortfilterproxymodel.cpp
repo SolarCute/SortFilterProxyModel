@@ -505,7 +505,7 @@ void QQmlSortFilterProxyModel::onProxyRolesCleared()
 void registerQQmlSortFilterProxyModelTypes() {
     qmlRegisterType<QQmlSortFilterProxyModel>("SortFilterProxyModel", 0, 2, "SortFilterProxyModel");
 }
-
+#ifndef SORT_FILTER_MODEL_DISABLE_AUTO_QML_REGISTER
 Q_COREAPP_STARTUP_FUNCTION(registerQQmlSortFilterProxyModelTypes)
-
+#endif
 }
